@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="AOR_Extended_WPF.Views.RequireMapView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             d:DesignHeight="400" d:DesignWidth="600">
+    <Grid Margin="10">
+        <StackPanel Margin="-6,234,6,-234">
+            <TextBlock Text="Require Resource Map Pack" FontSize="24" FontWeight="Bold" Margin="0,0,0,10"/>
+
+            <ListBox>
+                <ListBoxItem>
+                    <TextBlock TextWrapping="Wrap">
+                        - Download the <Run FontWeight="Bold" Foreground="DarkSlateGray">resource map pack</Run>
+                    </TextBlock>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <TextBlock TextWrapping="Wrap">
+                        - Extract the <Run FontWeight="Bold" Foreground="DarkSlateGray">Maps</Run> folder into <Run Foreground="Gray" FontStyle="Italic">./Albion-Online-Radar-QRadar/images/</Run>
+                    </TextBlock>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <TextBlock TextWrapping="Wrap">
+                        - You should now have the current path <Run Foreground="Gray" FontStyle="Italic">./Albion-Online-Radar-QRadar/images/Maps/**.png</Run>
+                    </TextBlock>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <TextBlock TextWrapping="Wrap">
+                        - <Run FontWeight="Bold" Foreground="DarkSlateGray">Refresh</Run> this page
+                    </TextBlock>
+                </ListBoxItem>
+            </ListBox>
+        </StackPanel>
+    </Grid>
+</UserControl>

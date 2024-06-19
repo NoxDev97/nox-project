@@ -1,0 +1,88 @@
+﻿<UserControl x:Class="AOR_Extended_WPF.Views.EnemiesView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d" d:DesignWidth="800" Height="453">
+    <Grid Margin="10">
+        <StackPanel>
+            <!-- Header -->
+            <StackPanel Margin="0,0,0,20">
+                <TextBlock Text="Enemies" FontSize="30" FontWeight="Bold" Margin="0,0,0,10"/>
+            </StackPanel>
+
+            <!-- Classic Enemies -->
+            <GroupBox Header="Classic Enemies" Margin="0,0,0,20">
+                <WrapPanel>
+                    <StackPanel Margin="10">
+                        <CheckBox x:Name="settingAllEnemies" Content="All" />
+                    </StackPanel>
+                    <StackPanel Margin="10">
+                        <CheckBox x:Name="settingNormalEnemy" Content="Normal" />
+                    </StackPanel>
+                    <StackPanel Margin="10">
+                        <CheckBox x:Name="settingMediumEnemy" Content="Medium" />
+                    </StackPanel>
+                    <StackPanel Margin="10">
+                        <CheckBox x:Name="settingEnchantedEnemy" Content="Enchanted" />
+                    </StackPanel>
+                    <StackPanel Margin="10">
+                        <CheckBox x:Name="settingMiniBossEnemy" Content="Mini-Boss" />
+                    </StackPanel>
+                    <StackPanel Margin="10">
+                        <CheckBox x:Name="settingBossEnemy" Content="Boss" />
+                    </StackPanel>
+                </WrapPanel>
+            </GroupBox>
+
+            <!-- Mists -->
+            <GroupBox Header="Mists" Margin="0,0,0,20">
+                <WrapPanel>
+                    <StackPanel Margin="10">
+                        <CheckBox x:Name="settingBossCrystalSpider" Content="Crystal Spider" />
+                    </StackPanel>
+                    <StackPanel Margin="10">
+                        <CheckBox x:Name="settingBossFairyDragon" Content="Fairy Dragon" />
+                    </StackPanel>
+                    <StackPanel Margin="10">
+                        <CheckBox x:Name="settingBossVeilWeaver" Content="Veil Weaver" />
+                    </StackPanel>
+                    <StackPanel Margin="10">
+                        <CheckBox x:Name="settingBossGriffin" Content="Griffin" />
+                    </StackPanel>
+                </WrapPanel>
+            </GroupBox>
+
+            <!-- Other -->
+            <GroupBox Header="Other" Margin="0,0,0,20">
+                <WrapPanel>
+                    <StackPanel Margin="10">
+                        <CheckBox x:Name="settingAvaloneDrones" Content="Avalone Drones" />
+                    </StackPanel>
+                    <StackPanel Margin="10">
+                        <CheckBox x:Name="settingShowUnmanagedEnemies" Content="Show unmanaged enemies" />
+                    </StackPanel>
+                    <StackPanel Margin="10">
+                        <CheckBox x:Name="settingShowEventEnemies" Content="Event enemies" />
+                    </StackPanel>
+                    <StackPanel Margin="10">
+                        <TextBlock Text="Min HP:" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                        <TextBox x:Name="settingMinHP" Width="100" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </WrapPanel>
+            </GroupBox>
+
+            <!-- Debug -->
+            <GroupBox Header="Debug" Margin="0,0,0,20">
+                <WrapPanel>
+                    <StackPanel Margin="10">
+                        <CheckBox x:Name="settingEnemiesHP" Content="Show HP" />
+                    </StackPanel>
+                    <StackPanel Margin="10">
+                        <CheckBox x:Name="settingEnemiesID" Content="Show Enemy ID" />
+                    </StackPanel>
+                </WrapPanel>
+            </GroupBox>
+        </StackPanel>
+    </Grid>
+</UserControl>

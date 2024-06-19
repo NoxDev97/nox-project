@@ -1,0 +1,10 @@
+﻿<Window x:Class="AOR_Extended_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="AOR Extended" Height="450" Width="800"
+         xmlns:views="clr-namespace:AOR_Extended_WPF.Views">
+    <Grid>
+        
+        <Frame Name="MainFrame" NavigationUIVisibility="Hidden" />
+    </Grid>
+</Window>

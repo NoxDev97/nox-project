@@ -1,0 +1,68 @@
+﻿<UserControl x:Class="AOR_Extended_WPF.Views.SettingsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Margin="10">
+        <StackPanel>
+            <!-- Main Settings -->
+            <TextBlock Text="Main settings" FontSize="20" FontWeight="Bold" Margin="0,10,0,10"/>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                <StackPanel Margin="0,0,10,0">
+                    <TextBlock Text="Main window Margin X" />
+                    <TextBox x:Name="mainWindowMarginX" Width="100" />
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock Text="Main window Margin Y" />
+                    <TextBox x:Name="mainWindowMarginY" Width="100" />
+                </StackPanel>
+            </StackPanel>
+
+            <!-- Items Window Settings -->
+            <TextBlock Text="Items window settings" FontSize="20" FontWeight="Bold" Margin="0,10,0,10"/>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                <StackPanel Margin="0,0,10,0">
+                    <TextBlock Text="Items window Margin X" />
+                    <TextBox x:Name="itemsWindowMarginX" Width="100" />
+                </StackPanel>
+                <StackPanel Margin="0,0,10,0">
+                    <TextBlock Text="Items window Margin Y" />
+                    <TextBox x:Name="itemsWindowMarginY" Width="100" />
+                </StackPanel>
+                <StackPanel Margin="0,0,10,0">
+                    <TextBlock Text="Items width" />
+                    <TextBox x:Name="itemsWidth" Width="100" />
+                </StackPanel>
+                <StackPanel Margin="0,0,10,0">
+                    <TextBlock Text="Items height" />
+                    <TextBox x:Name="itemsHeight" Width="100" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <CheckBox x:Name="settingItemsBorder" />
+                    <TextBlock Text="Items window border" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                </StackPanel>
+            </StackPanel>
+
+            <!-- Clear Button Settings -->
+            <TextBlock Text="Clear button settings" FontSize="20" FontWeight="Bold" Margin="0,10,0,10"/>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                <StackPanel Margin="0,0,10,0">
+                    <TextBlock Text="Button Margin X" />
+                    <TextBox x:Name="buttonMarginX" Width="100" />
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock Text="Button Margin Y" />
+                    <TextBox x:Name="buttonMarginY" Width="100" />
+                </StackPanel>
+            </StackPanel>
+
+            <!-- Buttons -->
+            <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                <Button Content="Load Settings" Click="LoadSettings_Click" Width="150" Margin="0,0,10,0"/>
+                <Button Content="Save Settings" Click="SaveSettings_Click" Width="150"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>
