@@ -19,7 +19,7 @@ namespace AOR_Extended_WPF.Handlers
         private readonly Dictionary<int, Spell> _spellInfo;
         private readonly Dictionary<string, DateTime> _castedSpells;
 
-        public PlayersHandler(Settings settings, Dictionary<int, Spell> spellsInfo)
+        public PlayersHandler(Settings settings, Dictionary<int, Spell> SpellsInfo)
         {
             _settings = settings;
             _playersInRange = new List<Player>();
@@ -28,7 +28,7 @@ namespace AOR_Extended_WPF.Handlers
             _filteredGuilds = new List<string>();
             _filteredAlliances = new List<string>();
             _alreadyFilteredPlayers = new List<string>();
-            _spellInfo = spellsInfo;
+            _spellInfo = SpellsInfo;
             _castedSpells = new Dictionary<string, DateTime>();
 
             foreach (var element in _settings.IgnoreList)

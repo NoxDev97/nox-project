@@ -5,182 +5,184 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:AOR_Extended_WPF.Views"
              mc:Ignorable="d" 
-            d:DesignHeight="800" d:DesignWidth="800">
-    <Grid Margin="10">
-        <StackPanel Margin="0,0,0,10">
-            <TextBlock Text="Static Resources" FontSize="30" FontWeight="Bold" Margin="0,0,0,10"/>
+            d:DesignHeight="600" d:DesignWidth="878">
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+        <Grid Margin="10">
+            <StackPanel Margin="0,0,0,10">
+                <TextBlock Text="Static Resources" FontSize="30" FontWeight="Bold" Margin="0,0,0,10"/>
 
-            <!-- Fiber -->
-            <StackPanel Margin="0,0,0,20">
-                <TextBlock Text="Fiber" FontSize="24" FontWeight="Bold" Margin="0,0,0,10"/>
-                <GroupBox Header="Types">
-                    <StackPanel>
-                        <CheckBox x:Name="settingFiberE0" Content="E0"/>
-                        <CheckBox x:Name="settingFiberE1" Content="E1"/>
-                        <CheckBox x:Name="settingFiberE2" Content="E2"/>
-                        <CheckBox x:Name="settingFiberE3" Content="E3"/>
-                        <CheckBox x:Name="settingFiberE4" Content="E4"/>
-                    </StackPanel>
-                </GroupBox>
+                <!-- Fiber -->
+                <StackPanel Margin="0,0,0,20">
+                    <TextBlock Text="Fiber" FontSize="24" FontWeight="Bold" Margin="0,0,0,10"/>
+                    <GroupBox Header="Types">
+                        <StackPanel>
+                            <CheckBox x:Name="settingFiberE0" Content="E0"/>
+                            <CheckBox x:Name="settingFiberE1" Content="E1"/>
+                            <CheckBox x:Name="settingFiberE2" Content="E2"/>
+                            <CheckBox x:Name="settingFiberE3" Content="E3"/>
+                            <CheckBox x:Name="settingFiberE4" Content="E4"/>
+                        </StackPanel>
+                    </GroupBox>
+                </StackPanel>
+
+                <!-- Hide -->
+                <StackPanel Margin="0,0,0,20">
+                    <TextBlock Text="Hide" FontSize="24" FontWeight="Bold" Margin="0,0,0,10"/>
+                    <GroupBox Header="Types">
+                        <StackPanel>
+                            <CheckBox x:Name="settingHideE0" Content="E0"/>
+                            <CheckBox x:Name="settingHideE1" Content="E1"/>
+                            <CheckBox x:Name="settingHideE2" Content="E2"/>
+                            <CheckBox x:Name="settingHideE3" Content="E3"/>
+                            <CheckBox x:Name="settingHideE4" Content="E4"/>
+                        </StackPanel>
+                    </GroupBox>
+                </StackPanel>
+
+                <!-- Wood -->
+                <StackPanel Margin="0,0,0,20">
+                    <TextBlock Text="Wood" FontSize="24" FontWeight="Bold" Margin="0,0,0,10"/>
+                    <GroupBox Header="Types">
+                        <StackPanel>
+                            <CheckBox x:Name="settingWoodE0" Content="E0"/>
+                            <CheckBox x:Name="settingWoodE1" Content="E1"/>
+                            <CheckBox x:Name="settingWoodE2" Content="E2"/>
+                            <CheckBox x:Name="settingWoodE3" Content="E3"/>
+                            <CheckBox x:Name="settingWoodE4" Content="E4"/>
+                        </StackPanel>
+                    </GroupBox>
+                </StackPanel>
+
+                <!-- Rock -->
+                <StackPanel Margin="0,0,0,20">
+                    <TextBlock Text="Rock" FontSize="24" FontWeight="Bold" Margin="0,0,0,10"/>
+                    <GroupBox Header="Types">
+                        <StackPanel>
+                            <CheckBox x:Name="settingRockE0" Content="E0"/>
+                            <CheckBox x:Name="settingRockE1" Content="E1"/>
+                            <CheckBox x:Name="settingRockE2" Content="E2"/>
+                            <CheckBox x:Name="settingRockE3" Content="E3"/>
+                            <CheckBox x:Name="settingRockE4" Content="E4"/>
+                        </StackPanel>
+                    </GroupBox>
+                </StackPanel>
+
+                <!-- Ore -->
+                <StackPanel Margin="0,0,0,20">
+                    <TextBlock Text="Ore" FontSize="24" FontWeight="Bold" Margin="0,0,0,10"/>
+                    <GroupBox Header="Types">
+                        <StackPanel>
+                            <CheckBox x:Name="settingOreE0" Content="E0"/>
+                            <CheckBox x:Name="settingOreE1" Content="E1"/>
+                            <CheckBox x:Name="settingOreE2" Content="E2"/>
+                            <CheckBox x:Name="settingOreE3" Content="E3"/>
+                            <CheckBox x:Name="settingOreE4" Content="E4"/>
+                        </StackPanel>
+                    </GroupBox>
+                </StackPanel>
+
+                <TextBlock Text="Living Resources" FontSize="30" FontWeight="Bold" Margin="0,20,0,10"/>
+
+                <!-- Dryad (Fiber) -->
+                <StackPanel Margin="0,0,0,20">
+                    <TextBlock Text="Dryad (Fiber)" FontSize="24" FontWeight="Bold" Margin="0,0,0,10"/>
+                    <GroupBox Header="Types">
+                        <StackPanel>
+                            <CheckBox x:Name="settingDryadFiberE0" Content="E0"/>
+                            <CheckBox x:Name="settingDryadFiberE1" Content="E1"/>
+                            <CheckBox x:Name="settingDryadFiberE2" Content="E2"/>
+                            <CheckBox x:Name="settingDryadFiberE3" Content="E3"/>
+                            <CheckBox x:Name="settingDryadFiberE4" Content="E4"/>
+                        </StackPanel>
+                    </GroupBox>
+                </StackPanel>
+
+                <!-- Animals (Hide) -->
+                <StackPanel Margin="0,0,0,20">
+                    <TextBlock Text="Animals (Hide)" FontSize="24" FontWeight="Bold" Margin="0,0,0,10"/>
+                    <GroupBox Header="Types">
+                        <StackPanel>
+                            <CheckBox x:Name="settingAnimalsHideE0" Content="E0"/>
+                            <CheckBox x:Name="settingAnimalsHideE1" Content="E1"/>
+                            <CheckBox x:Name="settingAnimalsHideE2" Content="E2"/>
+                            <CheckBox x:Name="settingAnimalsHideE3" Content="E3"/>
+                            <CheckBox x:Name="settingAnimalsHideE4" Content="E4"/>
+                        </StackPanel>
+                    </GroupBox>
+                </StackPanel>
+
+                <!-- Spirit (Wood) -->
+                <StackPanel Margin="0,0,0,20">
+                    <TextBlock Text="Spirit (Wood)" FontSize="24" FontWeight="Bold" Margin="0,0,0,10"/>
+                    <GroupBox Header="Types">
+                        <StackPanel>
+                            <CheckBox x:Name="settingSpiritWoodE0" Content="E0"/>
+                            <CheckBox x:Name="settingSpiritWoodE1" Content="E1"/>
+                            <CheckBox x:Name="settingSpiritWoodE2" Content="E2"/>
+                            <CheckBox x:Name="settingSpiritWoodE3" Content="E3"/>
+                            <CheckBox x:Name="settingSpiritWoodE4" Content="E4"/>
+                        </StackPanel>
+                    </GroupBox>
+                </StackPanel>
+
+                <!-- Elemental (Ore) -->
+                <StackPanel Margin="0,0,0,20">
+                    <TextBlock Text="Elemental (Ore)" FontSize="24" FontWeight="Bold" Margin="0,0,0,10"/>
+                    <GroupBox Header="Types">
+                        <StackPanel>
+                            <CheckBox x:Name="settingElementalOreE0" Content="E0"/>
+                            <CheckBox x:Name="settingElementalOreE1" Content="E1"/>
+                            <CheckBox x:Name="settingElementalOreE2" Content="E2"/>
+                            <CheckBox x:Name="settingElementalOreE3" Content="E3"/>
+                            <CheckBox x:Name="settingElementalOreE4" Content="E4"/>
+                        </StackPanel>
+                    </GroupBox>
+                </StackPanel>
+
+                <!-- Elemental (Rock) -->
+                <StackPanel Margin="0,0,0,20">
+                    <TextBlock Text="Elemental (Rock)" FontSize="24" FontWeight="Bold" Margin="0,0,0,10"/>
+                    <GroupBox Header="Types">
+                        <StackPanel>
+                            <CheckBox x:Name="settingElementalRockE0" Content="E0"/>
+                            <CheckBox x:Name="settingElementalRockE1" Content="E1"/>
+                            <CheckBox x:Name="settingElementalRockE2" Content="E2"/>
+                            <CheckBox x:Name="settingElementalRockE3" Content="E3"/>
+                            <CheckBox x:Name="settingElementalRockE4" Content="E4"/>
+                        </StackPanel>
+                    </GroupBox>
+                </StackPanel>
+
+                <!-- Other -->
+                <StackPanel Margin="0,0,0,20">
+                    <TextBlock Text="Other" FontSize="24" FontWeight="Bold" Margin="0,0,0,10"/>
+                    <GroupBox Header="Types">
+                        <StackPanel>
+                            <CheckBox x:Name="settingOtherE0" Content="E0"/>
+                            <CheckBox x:Name="settingOtherE1" Content="E1"/>
+                            <CheckBox x:Name="settingOtherE2" Content="E2"/>
+                            <CheckBox x:Name="settingOtherE3" Content="E3"/>
+                            <CheckBox x:Name="settingOtherE4" Content="E4"/>
+                        </StackPanel>
+                    </GroupBox>
+                </StackPanel>
+
+                <!-- Show fishing pool -->
+                <CheckBox x:Name="settingFishingPool" Content="Show fishing pool" Margin="0,0,0,10"/>
+
+                <!-- Debug -->
+                <CheckBox x:Name="settingDebug" Content="Debug" Margin="0,0,0,10"/>
+
+                <!-- Show Size -->
+                <CheckBox x:Name="settingShowSize" Content="Show Size" Margin="0,0,0,10"/>
+
+                <!-- Show HP -->
+                <CheckBox x:Name="settingShowHP" Content="Show HP (disabled)" IsEnabled="False" Margin="0,0,0,10"/>
+
+                <!-- Show ID -->
+                <CheckBox x:Name="settingShowID" Content="Show ID" Margin="0,0,0,10"/>
+
             </StackPanel>
-
-            <!-- Hide -->
-            <StackPanel Margin="0,0,0,20">
-                <TextBlock Text="Hide" FontSize="24" FontWeight="Bold" Margin="0,0,0,10"/>
-                <GroupBox Header="Types">
-                    <StackPanel>
-                        <CheckBox x:Name="settingHideE0" Content="E0"/>
-                        <CheckBox x:Name="settingHideE1" Content="E1"/>
-                        <CheckBox x:Name="settingHideE2" Content="E2"/>
-                        <CheckBox x:Name="settingHideE3" Content="E3"/>
-                        <CheckBox x:Name="settingHideE4" Content="E4"/>
-                    </StackPanel>
-                </GroupBox>
-            </StackPanel>
-
-            <!-- Wood -->
-            <StackPanel Margin="0,0,0,20">
-                <TextBlock Text="Wood" FontSize="24" FontWeight="Bold" Margin="0,0,0,10"/>
-                <GroupBox Header="Types">
-                    <StackPanel>
-                        <CheckBox x:Name="settingWoodE0" Content="E0"/>
-                        <CheckBox x:Name="settingWoodE1" Content="E1"/>
-                        <CheckBox x:Name="settingWoodE2" Content="E2"/>
-                        <CheckBox x:Name="settingWoodE3" Content="E3"/>
-                        <CheckBox x:Name="settingWoodE4" Content="E4"/>
-                    </StackPanel>
-                </GroupBox>
-            </StackPanel>
-
-            <!-- Rock -->
-            <StackPanel Margin="0,0,0,20">
-                <TextBlock Text="Rock" FontSize="24" FontWeight="Bold" Margin="0,0,0,10"/>
-                <GroupBox Header="Types">
-                    <StackPanel>
-                        <CheckBox x:Name="settingRockE0" Content="E0"/>
-                        <CheckBox x:Name="settingRockE1" Content="E1"/>
-                        <CheckBox x:Name="settingRockE2" Content="E2"/>
-                        <CheckBox x:Name="settingRockE3" Content="E3"/>
-                        <CheckBox x:Name="settingRockE4" Content="E4"/>
-                    </StackPanel>
-                </GroupBox>
-            </StackPanel>
-
-            <!-- Ore -->
-            <StackPanel Margin="0,0,0,20">
-                <TextBlock Text="Ore" FontSize="24" FontWeight="Bold" Margin="0,0,0,10"/>
-                <GroupBox Header="Types">
-                    <StackPanel>
-                        <CheckBox x:Name="settingOreE0" Content="E0"/>
-                        <CheckBox x:Name="settingOreE1" Content="E1"/>
-                        <CheckBox x:Name="settingOreE2" Content="E2"/>
-                        <CheckBox x:Name="settingOreE3" Content="E3"/>
-                        <CheckBox x:Name="settingOreE4" Content="E4"/>
-                    </StackPanel>
-                </GroupBox>
-            </StackPanel>
-
-            <TextBlock Text="Living Resources" FontSize="30" FontWeight="Bold" Margin="0,20,0,10"/>
-
-            <!-- Dryad (Fiber) -->
-            <StackPanel Margin="0,0,0,20">
-                <TextBlock Text="Dryad (Fiber)" FontSize="24" FontWeight="Bold" Margin="0,0,0,10"/>
-                <GroupBox Header="Types">
-                    <StackPanel>
-                        <CheckBox x:Name="settingDryadFiberE0" Content="E0"/>
-                        <CheckBox x:Name="settingDryadFiberE1" Content="E1"/>
-                        <CheckBox x:Name="settingDryadFiberE2" Content="E2"/>
-                        <CheckBox x:Name="settingDryadFiberE3" Content="E3"/>
-                        <CheckBox x:Name="settingDryadFiberE4" Content="E4"/>
-                    </StackPanel>
-                </GroupBox>
-            </StackPanel>
-
-            <!-- Animals (Hide) -->
-            <StackPanel Margin="0,0,0,20">
-                <TextBlock Text="Animals (Hide)" FontSize="24" FontWeight="Bold" Margin="0,0,0,10"/>
-                <GroupBox Header="Types">
-                    <StackPanel>
-                        <CheckBox x:Name="settingAnimalsHideE0" Content="E0"/>
-                        <CheckBox x:Name="settingAnimalsHideE1" Content="E1"/>
-                        <CheckBox x:Name="settingAnimalsHideE2" Content="E2"/>
-                        <CheckBox x:Name="settingAnimalsHideE3" Content="E3"/>
-                        <CheckBox x:Name="settingAnimalsHideE4" Content="E4"/>
-                    </StackPanel>
-                </GroupBox>
-            </StackPanel>
-
-            <!-- Spirit (Wood) -->
-            <StackPanel Margin="0,0,0,20">
-                <TextBlock Text="Spirit (Wood)" FontSize="24" FontWeight="Bold" Margin="0,0,0,10"/>
-                <GroupBox Header="Types">
-                    <StackPanel>
-                        <CheckBox x:Name="settingSpiritWoodE0" Content="E0"/>
-                        <CheckBox x:Name="settingSpiritWoodE1" Content="E1"/>
-                        <CheckBox x:Name="settingSpiritWoodE2" Content="E2"/>
-                        <CheckBox x:Name="settingSpiritWoodE3" Content="E3"/>
-                        <CheckBox x:Name="settingSpiritWoodE4" Content="E4"/>
-                    </StackPanel>
-                </GroupBox>
-            </StackPanel>
-
-            <!-- Elemental (Ore) -->
-            <StackPanel Margin="0,0,0,20">
-                <TextBlock Text="Elemental (Ore)" FontSize="24" FontWeight="Bold" Margin="0,0,0,10"/>
-                <GroupBox Header="Types">
-                    <StackPanel>
-                        <CheckBox x:Name="settingElementalOreE0" Content="E0"/>
-                        <CheckBox x:Name="settingElementalOreE1" Content="E1"/>
-                        <CheckBox x:Name="settingElementalOreE2" Content="E2"/>
-                        <CheckBox x:Name="settingElementalOreE3" Content="E3"/>
-                        <CheckBox x:Name="settingElementalOreE4" Content="E4"/>
-                    </StackPanel>
-                </GroupBox>
-            </StackPanel>
-
-            <!-- Elemental (Rock) -->
-            <StackPanel Margin="0,0,0,20">
-                <TextBlock Text="Elemental (Rock)" FontSize="24" FontWeight="Bold" Margin="0,0,0,10"/>
-                <GroupBox Header="Types">
-                    <StackPanel>
-                        <CheckBox x:Name="settingElementalRockE0" Content="E0"/>
-                        <CheckBox x:Name="settingElementalRockE1" Content="E1"/>
-                        <CheckBox x:Name="settingElementalRockE2" Content="E2"/>
-                        <CheckBox x:Name="settingElementalRockE3" Content="E3"/>
-                        <CheckBox x:Name="settingElementalRockE4" Content="E4"/>
-                    </StackPanel>
-                </GroupBox>
-            </StackPanel>
-
-            <!-- Other -->
-            <StackPanel Margin="0,0,0,20">
-                <TextBlock Text="Other" FontSize="24" FontWeight="Bold" Margin="0,0,0,10"/>
-                <GroupBox Header="Types">
-                    <StackPanel>
-                        <CheckBox x:Name="settingOtherE0" Content="E0"/>
-                        <CheckBox x:Name="settingOtherE1" Content="E1"/>
-                        <CheckBox x:Name="settingOtherE2" Content="E2"/>
-                        <CheckBox x:Name="settingOtherE3" Content="E3"/>
-                        <CheckBox x:Name="settingOtherE4" Content="E4"/>
-                    </StackPanel>
-                </GroupBox>
-            </StackPanel>
-
-            <!-- Show fishing pool -->
-            <CheckBox x:Name="settingFishingPool" Content="Show fishing pool" Margin="0,0,0,10"/>
-
-            <!-- Debug -->
-            <CheckBox x:Name="settingDebug" Content="Debug" Margin="0,0,0,10"/>
-
-            <!-- Show Size -->
-            <CheckBox x:Name="settingShowSize" Content="Show Size" Margin="0,0,0,10"/>
-
-            <!-- Show HP -->
-            <CheckBox x:Name="settingShowHP" Content="Show HP (disabled)" IsEnabled="False" Margin="0,0,0,10"/>
-
-            <!-- Show ID -->
-            <CheckBox x:Name="settingShowID" Content="Show ID" Margin="0,0,0,10"/>
-
-        </StackPanel>
-    </Grid>
+        </Grid>
+    </ScrollViewer>
 </UserControl>

@@ -33,6 +33,8 @@ namespace AOR_Extended_WPF.Classes
             _commandCount = _payload.ReadByte();
             _timestamp = ReadUInt32BigEndian(_payload);
             _challenge = ReadUInt32BigEndian(_payload);
+
+            Console.WriteLine($"Parsed Packet Header: PeerId={_peerId}, Flags={_flags}, CommandCount={_commandCount}, Timestamp={_timestamp}, Challenge={_challenge}");
         }
 
         private void ParsePacket()
@@ -42,6 +44,7 @@ namespace AOR_Extended_WPF.Classes
             for (int i = 0; i < _commandCount; i++)
             {
                 _commands.Add(new PhotonCommand(this, _payload));
+                Console.WriteLine($"Parsed Command {i + 1}/{_commandCount}");
             }
         }
 
@@ -56,6 +59,10 @@ namespace AOR_Extended_WPF.Classes
         private static uint ReadUInt32BigEndian(BinaryReader reader)
         {
             byte[] bytes = reader.ReadBytes(4);
+            if (bytes.Length < 4)
+            {
+                throw new ArgumentException("A matriz de destino não é grande o suficiente para copiar todos os itens da coleção.");
+            }
             if (BitConverter.IsLittleEndian)
                 Array.Reverse(bytes);
             return BitConverter.ToUInt32(bytes, 0);

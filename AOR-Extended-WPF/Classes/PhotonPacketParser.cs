@@ -10,6 +10,7 @@ namespace AOR_Extended_WPF.Classes
 
         public void Handle(byte[] buffer)
         {
+            Console.WriteLine($"Handling buffer of length: {buffer.Length}");
             var packet = new PhotonPacket(this, buffer);
             PacketReceived?.Invoke(packet);
         }

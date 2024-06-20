@@ -4,9 +4,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              mc:Ignorable="d"
-             d:DesignHeight="400" d:DesignWidth="600">
+             d:DesignHeight="600" d:DesignWidth="878">
     <Grid Margin="10">
-        <StackPanel Margin="-6,234,6,-234">
+        <StackPanel>
             <TextBlock Text="Require Resource Map Pack" FontSize="24" FontWeight="Bold" Margin="0,0,0,10"/>
 
             <ListBox>

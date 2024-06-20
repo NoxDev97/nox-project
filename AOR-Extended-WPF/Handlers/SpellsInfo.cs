@@ -1,5 +1,4 @@
 ﻿using System;
-using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 
@@ -149,17 +148,21 @@ namespace SpellsNamespace
             AddItem(2173, 0, "IMP_SUMMON_MINIONS_BUFF");
             AddItem(2174, 0, "IMP_SUMMON_MINIONS_SUMMON");
             AddItem(2175, 0, "IMP_SUMMON_MINIONS_SUMMON_DAMAGE");
-            AddItem(2176, 0, "IMP_SUMMON_MINIONS_DEBUFF");
-            AddItem(2177, 0, "IMP_SUMMON_MINIONS_SUMMON_DAMAGE_EFFECT");
-            AddItem(2178, 0, "IMP_SUMMON_MINIONS_SUMMON_EFFECT");
-            AddItem(2179, 0, "SHAPE_W_TETHERBEAM_CHECK_ENEMY");
-            AddItem(2180, 0, "SHAPE_W_TETHERBEAM_CHECK_ENEMY_EFFECT");
-            AddItem(2181, 0, "SHAPE_W_TETHERBEAM_CHECK_EFFECT", 2179);
-            AddItem(2182, 0, "SHAPE_W_TETHERBEAM_DAMAGE");
-            AddItem(2183, 0, "SHAPE_W_TETHERBEAM_DAMAGE_ENEMY");
-            AddItem(2184, 0, "SHAPE_W_TETHERBEAM_DAMAGE_ENEMY_EFFECT");
-            AddItem(2185, 0, "SHAPE_W_TETHERBEAM_EFFECT_ENEMY", 2179);
-            AddItem(2186, 0, "SHAPE_W_TETHERBEAM_VFX");
+            AddItem(2176, 0, "IMP_SUMMON_MINIONS_SUMMON_DAMAGE_EFFECT");
+            AddItem(2177, 0, "IMP_SUMMON_MINIONS_SUMMON_EFFECT");
+            AddItem(2178, 0, "SHAPE_W_TETHERBEAM_CHECK_ENEMY");
+            AddItem(2179, 0, "SHAPE_W_TETHERBEAM_CHECK_ENEMY_EFFECT");
+            AddItem(2180, 0, "SHAPE_W_TETHERBEAM_CHECK_EFFECT", 2179);
+            AddItem(2181, 0, "SHAPE_W_TETHERBEAM_DAMAGE");
+            AddItem(2182, 0, "SHAPE_W_TETHERBEAM_DAMAGE_ENEMY");
+            AddItem(2183, 0, "SHAPE_W_TETHERBEAM_DAMAGE_ENEMY_EFFECT");
+            AddItem(2184, 0, "SHAPE_W_TETHERBEAM_EFFECT_ENEMY", 2179);
+            AddItem(2185, 0, "SHAPE_W_TETHERBEAM_VFX");
+        }
+
+        public Dictionary<int, Spell> GetSpellList()
+        {
+            return spellList;
         }
     }
 }

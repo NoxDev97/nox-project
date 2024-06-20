@@ -1,10 +1,31 @@
 ﻿<Window x:Class="AOR_Extended_WPF.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="AOR Extended" Height="450" Width="800"
-         xmlns:views="clr-namespace:AOR_Extended_WPF.Views">
+        Title="MainWindow" Height="600" Width="878">
+    
     <Grid>
         
-        <Frame Name="MainFrame" NavigationUIVisibility="Hidden" />
+        <!-- Sidebar -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" >
+            <Button Content="PvP e Players" Click="NavigateToHomePage" Style="{StaticResource MenuButtonStyle}"/>
+            <Button Content="Resources" Click="NavigateToResourcesPage" Style="{StaticResource MenuButtonStyle}"/>
+            <Button Content="Baus" Click="NavigateToChestPage" Style="{StaticResource MenuButtonStyle}"/>
+            <Button Content="Enemies" Click="NavigateToEnemiesPage" Style="{StaticResource MenuButtonStyle}"/>
+            <Button Content="Map" Click="NavigateToMapPage" Style="{StaticResource MenuButtonStyle}"/>
+            <Button Content="Ignore List" Click="NavigateToIgnoreListPage" Style="{StaticResource MenuButtonStyle}"/>
+            <Button Content="Settings" Click="NavigateToSettingsPage" Style="{StaticResource MenuButtonStyle}"/>
+            
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+            <Button Content="Drawing" Click="NavigateToDrawingPage" Style="{StaticResource MenuButtonStyle}"/>
+        </StackPanel>
+        
+        <!-- Main Content -->
+
+
+            <Frame Margin="5,40,5,40" Name="MainFrame" NavigationUIVisibility="Hidden" />
+      
+            
+        
     </Grid>
 </Window>

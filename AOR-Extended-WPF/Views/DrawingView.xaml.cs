@@ -1,31 +1,49 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
+using AOR_Extended_WPF.Utils;
+using AOR_Extended_WPF.Drawings;
+using AOR_Extended_WPF.Handlers;
 
 namespace AOR_Extended_WPF.Views
 {
-    /// <summary>
-    /// Lógica interna para DrawingView.xaml
-    /// </summary>
     public partial class DrawingView : Window
     {
         private bool nametagRangeEnabled = false;
+        private Settings settings;
+        private DrawingUtils drawingUtils;
+        private ChestsDrawing chestsDrawing;
+        private HarvestablesHandler harvestablesHandler;
+        private DungeonsHandler dungeonsHandler;
+        private PlayersHandler playersHandler;
+        private TrackFootprintsHandler trackFootprintsHandler;
+        private WispCageHandler wispCageHandler;
+        private FishingHandler fishingHandler;
+        private MobsHandler mobsHandler;
 
         public DrawingView()
         {
             InitializeComponent();
             InitializeControls();
+
+            settings = new Settings();
+            drawingUtils = new DrawingUtils(settings);
+            chestsDrawing = new ChestsDrawing(settings);
+            harvestablesHandler = new HarvestablesHandler(settings);
+            dungeonsHandler = new DungeonsHandler(settings);
+            playersHandler = new PlayersHandler(settings, settings.SpellsInfo);
+            trackFootprintsHandler = new TrackFootprintsHandler(settings);
+            wispCageHandler = new WispCageHandler(settings);
+            fishingHandler = new FishingHandler(settings);
+            mobsHandler = new MobsHandler(settings);
+
+            this.Loaded += DrawingView_Loaded;
+        }
+
+        private void DrawingView_Loaded(object sender, RoutedEventArgs e)
+        {
+            DrawInitialElements();
         }
 
         private void InitializeControls()
@@ -37,55 +55,82 @@ namespace AOR_Extended_WPF.Views
         private void ShowNametagRangeButton_Click(object sender, RoutedEventArgs e)
         {
             nametagRangeEnabled = !nametagRangeEnabled;
-            showNametagRangeButton.Content = nametagRangeEnabled ? "Hide Nametag Range" : "Show Nametag Range";
+            showNametagRangeButton.Content = nametagRangeEnabled ? "Esconder área de segurança" : "Mostrar área de segurança";
             DrawNametagRange();
         }
 
         private void DrawNametagRange()
         {
-            var context = nametagRangeCanvas.RenderTransform as TranslateTransform ?? new TranslateTransform();
-            nametagRangeCanvas.RenderTransform = context;
             nametagRangeCanvas.Children.Clear();
 
             if (nametagRangeEnabled)
             {
-                var centerX = nametagRangeCanvas.Width / 2 + 2.5;
-                var centerY = nametagRangeCanvas.Height / 2 + 2.5;
-                var radius = 190;
+                double centerX = nametagRangeCanvas.Width / 2 + 2.5;
+                double centerY = nametagRangeCanvas.Height / 2 + 2.5;
+                double radius = 190;
 
-                var ellipse = new Ellipse
+                Ellipse nametagRangeEllipse = new Ellipse
                 {
                     Width = radius * 2,
                     Height = radius * 2,
-                    Stroke = Brushes.White,
+                    Stroke = Brushes.Black,
                     StrokeThickness = 1,
                     RenderTransform = new TranslateTransform(centerX - radius, centerY - radius)
                 };
 
-                nametagRangeCanvas.Children.Add(ellipse);
+                nametagRangeCanvas.Children.Add(nametagRangeEllipse);
             }
         }
 
         private void ToggleGridButton_Click(object sender, RoutedEventArgs e)
         {
-            var gridCanvasContext = gridCanvas.RenderTransform as TranslateTransform ?? new TranslateTransform();
-            gridCanvas.RenderTransform = gridCanvasContext;
-
-            if (toggleGridButton.Content.ToString() == "Disable Grid")
+            if (toggleGridButton.Content.ToString() == "Desabilitar grade")
             {
-                gridCanvas.Children.Clear();
-                toggleGridButton.Content = "Enable Grid";
+                ClearGrid();
+                toggleGridButton.Content = "Ativar grade";
             }
             else
             {
                 InitializeGrid();
-                toggleGridButton.Content = "Disable Grid";
+                toggleGridButton.Content = "Desabilitar grade";
             }
         }
 
         private void InitializeGrid()
         {
-            // Your grid initialization code
+            drawingUtils.DrawBoard(gridCanvas);
+        }
+
+        private void ClearGrid()
+        {
+            drawingUtils.ClearGrid(gridCanvas);
+        }
+
+        private void DrawInitialElements()
+        {
+            var visual = new DrawingVisual();
+
+            using (DrawingContext ctx = visual.RenderOpen())
+            {
+                drawingUtils.InitOurPlayerCanvas(ourPlayerCanvas, ctx);
+                drawingUtils.InitGridCanvas(gridCanvas, ctx);
+
+                foreach (var harvestable in harvestablesHandler.HarvestableList)
+                {
+                    var point = drawingUtils.TransformPoint(harvestable.PosX, harvestable.PosY);
+                    drawingUtils.DrawFilledCircle(ctx, point.X, point.Y, 5, Colors.Green);
+                }
+
+                foreach (var dungeon in dungeonsHandler.DungeonList)
+                {
+                    var point = drawingUtils.TransformPoint(dungeon.PosX, dungeon.PosY);
+                    drawingUtils.DrawFilledCircle(ctx, point.X, point.Y, 5, Colors.Red);
+                }
+            }
+
+            var drawingImage = new DrawingImage(visual.Drawing);
+            var image = new Image { Source = drawingImage };
+            ourPlayerCanvas.Children.Add(image);
         }
     }
 }

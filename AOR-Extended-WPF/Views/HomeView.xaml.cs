@@ -1,4 +1,5 @@
-﻿using System.Windows.Controls;
+﻿using System;
+using System.Windows.Controls;
 using AOR_Extended_WPF.Properties;  // Adicione esta linha
 
 namespace AOR_Extended_WPF.Views
@@ -50,13 +51,24 @@ namespace AOR_Extended_WPF.Views
 
         private bool ReturnLocalBool(string key)
         {
-            var value = Settings.Default[key]?.ToString();
+            var value = Settings.Default[key]?.ToString().ToLower();
             return value == "true";
         }
 
-        private void SaveSetting(string key, bool? value)
+        private void SaveSetting(string key, object value)
         {
-            Settings.Default[key] = value.ToString();
+            if (value is bool)
+            {
+                Settings.Default[key] = value.ToString().ToLower(); // Armazena como "true" ou "false"
+            }
+            else if (value is string)
+            {
+                Settings.Default[key] = value;
+            }
+            else
+            {
+                throw new InvalidOperationException($"Tipo de valor inesperado para '{key}': {value.GetType()}");
+            }
             Settings.Default.Save();
         }
     }

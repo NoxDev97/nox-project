@@ -8,56 +8,64 @@ namespace AOR_Extended_WPF.Classes
 {
     public class Protocol16Deserializer
     {
-        private static readonly Dictionary<string, int> Protocol16Type = LoadProtocol16Type();
+        private static readonly Dictionary<string, Protocol16Type> Protocol16TypeMap = LoadProtocol16Type();
 
-        private static Dictionary<string, int> LoadProtocol16Type()
+        private static Dictionary<string, Protocol16Type> LoadProtocol16Type()
         {
-            var jsonText = File.ReadAllText("enumerations/Protocol16Type.json");
-            return JsonSerializer.Deserialize<Dictionary<string, int>>(jsonText);
+            string basePath = AppDomain.CurrentDomain.BaseDirectory;
+            string filePath = Path.Combine(basePath, "Enumerations", "Protocol16Type.json");
+
+            if (!File.Exists(filePath))
+            {
+                throw new FileNotFoundException("Protocol16Type.json not found", filePath);
+            }
+
+            string jsonText = File.ReadAllText(filePath);
+            return JsonSerializer.Deserialize<Dictionary<string, Protocol16Type>>(jsonText);
         }
 
-        public static object Deserialize(BinaryReader input, int typeCode)
+        public static object Deserialize(BinaryReader input, Protocol16Type typeCode)
         {
             switch (typeCode)
             {
-                case 0:
-                case 42:
+                case Protocol16Type.Unknown:
+                case Protocol16Type.Null:
                     return null;
-                case 98:
+                case Protocol16Type.Byte:
                     return DeserializeByte(input);
-                case 111:
+                case Protocol16Type.Boolean:
                     return DeserializeBoolean(input);
-                case 107:
+                case Protocol16Type.Short:
                     return DeserializeShort(input);
-                case 105:
+                case Protocol16Type.Integer:
                     return DeserializeInteger(input);
-                case 110:
+                case Protocol16Type.IntegerArray:
                     return DeserializeIntegerArray(input);
-                case 100:
+                case Protocol16Type.Double:
                     return DeserializeDouble(input);
-                case 108:
+                case Protocol16Type.Long:
                     return DeserializeLong(input);
-                case 102:
+                case Protocol16Type.Float:
                     return DeserializeFloat(input);
-                case 115:
+                case Protocol16Type.String:
                     return DeserializeString(input);
-                case 97:
+                case Protocol16Type.StringArray:
                     return DeserializeStringArray(input);
-                case 120:
+                case Protocol16Type.ByteArray:
                     return DeserializeByteArray(input);
-                case 101:
+                case Protocol16Type.EventData:
                     return DeserializeEventData(input);
-                case 68:
+                case Protocol16Type.Dictionary:
                     return DeserializeDictionary(input);
-                case 121:
+                case Protocol16Type.Array:
                     return DeserializeArray(input);
-                case 112:
+                case Protocol16Type.OperationResponse:
                     return DeserializeOperationResponse(input);
-                case 113:
+                case Protocol16Type.OperationRequest:
                     return DeserializeOperationRequest(input);
-                case 104:
+                case Protocol16Type.Hashtable:
                     return DeserializeHashtable(input);
-                case 122:
+                case Protocol16Type.ObjectArray:
                     return DeserializeObjectArray(input);
                 default:
                     throw new Exception($"Type code: {typeCode} not implemented.");
@@ -117,7 +125,7 @@ namespace AOR_Extended_WPF.Classes
         private static List<object> DeserializeArray(BinaryReader input)
         {
             short size = DeserializeShort(input);
-            int typeCode = DeserializeByte(input);
+            Protocol16Type typeCode = (Protocol16Type)DeserializeByte(input);
             List<object> res = new List<object>(size);
             for (int i = 0; i < size; i++)
             {
@@ -132,7 +140,7 @@ namespace AOR_Extended_WPF.Classes
             List<object> output = new List<object>(tableSize);
             for (int i = 0; i < tableSize; i++)
             {
-                int typeCode = DeserializeByte(input);
+                Protocol16Type typeCode = (Protocol16Type)DeserializeByte(input);
                 output.Add(Deserialize(input, typeCode));
             }
             return output;
@@ -141,24 +149,24 @@ namespace AOR_Extended_WPF.Classes
         private static Dictionary<object, object> DeserializeHashtable(BinaryReader input)
         {
             short tableSize = DeserializeShort(input);
-            return DeserializeDictionaryElements(input, tableSize, 0, 0);
+            return DeserializeDictionaryElements(input, tableSize, Protocol16Type.Unknown, Protocol16Type.Unknown);
         }
 
         private static Dictionary<object, object> DeserializeDictionary(BinaryReader input)
         {
-            int keyTypeCode = DeserializeByte(input);
-            int valueTypeCode = DeserializeByte(input);
+            Protocol16Type keyTypeCode = (Protocol16Type)DeserializeByte(input);
+            Protocol16Type valueTypeCode = (Protocol16Type)DeserializeByte(input);
             short dictionarySize = DeserializeShort(input);
             return DeserializeDictionaryElements(input, dictionarySize, keyTypeCode, valueTypeCode);
         }
 
-        private static Dictionary<object, object> DeserializeDictionaryElements(BinaryReader input, int dictionarySize, int keyTypeCode, int valueTypeCode)
+        private static Dictionary<object, object> DeserializeDictionaryElements(BinaryReader input, int dictionarySize, Protocol16Type keyTypeCode, Protocol16Type valueTypeCode)
         {
             Dictionary<object, object> output = new Dictionary<object, object>();
             for (int i = 0; i < dictionarySize; i++)
             {
-                object key = Deserialize(input, keyTypeCode == 0 || keyTypeCode == 42 ? DeserializeByte(input) : keyTypeCode);
-                object value = Deserialize(input, valueTypeCode == 0 || valueTypeCode == 42 ? DeserializeByte(input) : valueTypeCode);
+                object key = Deserialize(input, keyTypeCode == Protocol16Type.Unknown ? (Protocol16Type)DeserializeByte(input) : keyTypeCode);
+                object value = Deserialize(input, valueTypeCode == Protocol16Type.Unknown ? (Protocol16Type)DeserializeByte(input) : valueTypeCode);
                 output[key] = value;
             }
             return output;
@@ -179,7 +187,7 @@ namespace AOR_Extended_WPF.Classes
         {
             byte operationCode = DeserializeByte(input);
             short returnCode = DeserializeShort(input);
-            object debugMessage = Deserialize(input, DeserializeByte(input));
+            object debugMessage = Deserialize(input, (Protocol16Type)DeserializeByte(input));
             Dictionary<string, object> parameters = DeserializeParameterTable(input);
             return new Dictionary<string, object>
             {
@@ -217,7 +225,7 @@ namespace AOR_Extended_WPF.Classes
             for (int i = 0; i < tableSize; i++)
             {
                 string key = input.ReadByte().ToString();
-                int valueTypeCode = input.ReadByte();
+                Protocol16Type valueTypeCode = (Protocol16Type)input.ReadByte();
                 object value = Deserialize(input, valueTypeCode);
                 table[key] = value;
             }

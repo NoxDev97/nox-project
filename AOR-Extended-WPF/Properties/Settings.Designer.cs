@@ -301,10 +301,10 @@ namespace AOR_Extended_WPF.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool settingChestGreen {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingChestGreen {
             get {
-                return ((bool)(this["settingChestGreen"]));
+                return ((string)(this["settingChestGreen"]));
             }
             set {
                 this["settingChestGreen"] = value;
@@ -313,10 +313,10 @@ namespace AOR_Extended_WPF.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool settingChestBlue {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingChestBlue {
             get {
-                return ((bool)(this["settingChestBlue"]));
+                return ((string)(this["settingChestBlue"]));
             }
             set {
                 this["settingChestBlue"] = value;
@@ -325,22 +325,22 @@ namespace AOR_Extended_WPF.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool ettingChestPurple {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingChestPurple {
             get {
-                return ((bool)(this["ettingChestPurple"]));
+                return ((string)(this["settingChestPurple"]));
             }
             set {
-                this["ettingChestPurple"] = value;
+                this["settingChestPurple"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool settingChestYellow {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingChestYellow {
             get {
-                return ((bool)(this["settingChestYellow"]));
+                return ((string)(this["settingChestYellow"]));
             }
             set {
                 this["settingChestYellow"] = value;
@@ -349,10 +349,10 @@ namespace AOR_Extended_WPF.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool settingMistSolo {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingMistSolo {
             get {
-                return ((bool)(this["settingMistSolo"]));
+                return ((string)(this["settingMistSolo"]));
             }
             set {
                 this["settingMistSolo"] = value;
@@ -361,10 +361,10 @@ namespace AOR_Extended_WPF.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool settingMistDuo {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingMistDuo {
             get {
-                return ((bool)(this["settingMistDuo"]));
+                return ((string)(this["settingMistDuo"]));
             }
             set {
                 this["settingMistDuo"] = value;
@@ -373,10 +373,10 @@ namespace AOR_Extended_WPF.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool settingMistE0 {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingMistE0 {
             get {
-                return ((bool)(this["settingMistE0"]));
+                return ((string)(this["settingMistE0"]));
             }
             set {
                 this["settingMistE0"] = value;
@@ -385,10 +385,10 @@ namespace AOR_Extended_WPF.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool settingMistE1 {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingMistE1 {
             get {
-                return ((bool)(this["settingMistE1"]));
+                return ((string)(this["settingMistE1"]));
             }
             set {
                 this["settingMistE1"] = value;
@@ -397,10 +397,10 @@ namespace AOR_Extended_WPF.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool settingMistE2 {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingMistE2 {
             get {
-                return ((bool)(this["settingMistE2"]));
+                return ((string)(this["settingMistE2"]));
             }
             set {
                 this["settingMistE2"] = value;
@@ -409,10 +409,10 @@ namespace AOR_Extended_WPF.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool settingMistE3 {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingMistE3 {
             get {
-                return ((bool)(this["settingMistE3"]));
+                return ((string)(this["settingMistE3"]));
             }
             set {
                 this["settingMistE3"] = value;
@@ -421,10 +421,10 @@ namespace AOR_Extended_WPF.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool settingMistE4 {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingMistE4 {
             get {
-                return ((bool)(this["settingMistE4"]));
+                return ((string)(this["settingMistE4"]));
             }
             set {
                 this["settingMistE4"] = value;
@@ -433,10 +433,10 @@ namespace AOR_Extended_WPF.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool settingCage {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingCage {
             get {
-                return ((bool)(this["settingCage"]));
+                return ((string)(this["settingCage"]));
             }
             set {
                 this["settingCage"] = value;
@@ -445,10 +445,10 @@ namespace AOR_Extended_WPF.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool settingDungeonSolo {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingDungeonSolo {
             get {
-                return ((bool)(this["settingDungeonSolo"]));
+                return ((string)(this["settingDungeonSolo"]));
             }
             set {
                 this["settingDungeonSolo"] = value;
@@ -457,10 +457,10 @@ namespace AOR_Extended_WPF.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool settingDungeonDuo {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingDungeonDuo {
             get {
-                return ((bool)(this["settingDungeonDuo"]));
+                return ((string)(this["settingDungeonDuo"]));
             }
             set {
                 this["settingDungeonDuo"] = value;
@@ -469,10 +469,10 @@ namespace AOR_Extended_WPF.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool settingDungeonE0 {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingDungeonE0 {
             get {
-                return ((bool)(this["settingDungeonE0"]));
+                return ((string)(this["settingDungeonE0"]));
             }
             set {
                 this["settingDungeonE0"] = value;
@@ -481,10 +481,10 @@ namespace AOR_Extended_WPF.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool settingDungeonE1 {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingDungeonE1 {
             get {
-                return ((bool)(this["settingDungeonE1"]));
+                return ((string)(this["settingDungeonE1"]));
             }
             set {
                 this["settingDungeonE1"] = value;
@@ -493,10 +493,10 @@ namespace AOR_Extended_WPF.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool settingDungeonE2 {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingDungeonE2 {
             get {
-                return ((bool)(this["settingDungeonE2"]));
+                return ((string)(this["settingDungeonE2"]));
             }
             set {
                 this["settingDungeonE2"] = value;
@@ -505,10 +505,10 @@ namespace AOR_Extended_WPF.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool settingDungeonE3 {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingDungeonE3 {
             get {
-                return ((bool)(this["settingDungeonE3"]));
+                return ((string)(this["settingDungeonE3"]));
             }
             set {
                 this["settingDungeonE3"] = value;
@@ -517,10 +517,10 @@ namespace AOR_Extended_WPF.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool settingDungeonE4 {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingDungeonE4 {
             get {
-                return ((bool)(this["settingDungeonE4"]));
+                return ((string)(this["settingDungeonE4"]));
             }
             set {
                 this["settingDungeonE4"] = value;
@@ -529,10 +529,10 @@ namespace AOR_Extended_WPF.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool settingDungeonCorrupted {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingDungeonCorrupted {
             get {
-                return ((bool)(this["settingDungeonCorrupted"]));
+                return ((string)(this["settingDungeonCorrupted"]));
             }
             set {
                 this["settingDungeonCorrupted"] = value;
@@ -541,10 +541,10 @@ namespace AOR_Extended_WPF.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool settingDungeonHellgate {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingDungeonHellgate {
             get {
-                return ((bool)(this["settingDungeonHellgate"]));
+                return ((string)(this["settingDungeonHellgate"]));
             }
             set {
                 this["settingDungeonHellgate"] = value;
@@ -553,10 +553,10 @@ namespace AOR_Extended_WPF.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool settingFootTracksSolo {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingFootTracksSolo {
             get {
-                return ((bool)(this["settingFootTracksSolo"]));
+                return ((string)(this["settingFootTracksSolo"]));
             }
             set {
                 this["settingFootTracksSolo"] = value;
@@ -565,10 +565,10 @@ namespace AOR_Extended_WPF.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool settingFootTracksGroup {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingFootTracksGroup {
             get {
-                return ((bool)(this["settingFootTracksGroup"]));
+                return ((string)(this["settingFootTracksGroup"]));
             }
             set {
                 this["settingFootTracksGroup"] = value;
@@ -577,10 +577,10 @@ namespace AOR_Extended_WPF.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool settingAllEnemies {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingAllEnemies {
             get {
-                return ((bool)(this["settingAllEnemies"]));
+                return ((string)(this["settingAllEnemies"]));
             }
             set {
                 this["settingAllEnemies"] = value;
@@ -589,10 +589,10 @@ namespace AOR_Extended_WPF.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool settingNormalEnemy {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingNormalEnemy {
             get {
-                return ((bool)(this["settingNormalEnemy"]));
+                return ((string)(this["settingNormalEnemy"]));
             }
             set {
                 this["settingNormalEnemy"] = value;
@@ -601,10 +601,10 @@ namespace AOR_Extended_WPF.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool settingMediumEnemy {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingMediumEnemy {
             get {
-                return ((bool)(this["settingMediumEnemy"]));
+                return ((string)(this["settingMediumEnemy"]));
             }
             set {
                 this["settingMediumEnemy"] = value;
@@ -613,10 +613,10 @@ namespace AOR_Extended_WPF.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool settingEnchantedEnemy {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingEnchantedEnemy {
             get {
-                return ((bool)(this["settingEnchantedEnemy"]));
+                return ((string)(this["settingEnchantedEnemy"]));
             }
             set {
                 this["settingEnchantedEnemy"] = value;
@@ -625,10 +625,10 @@ namespace AOR_Extended_WPF.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool settingMiniBossEnemy {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingMiniBossEnemy {
             get {
-                return ((bool)(this["settingMiniBossEnemy"]));
+                return ((string)(this["settingMiniBossEnemy"]));
             }
             set {
                 this["settingMiniBossEnemy"] = value;
@@ -637,10 +637,10 @@ namespace AOR_Extended_WPF.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool settingBossEnemy {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingBossEnemy {
             get {
-                return ((bool)(this["settingBossEnemy"]));
+                return ((string)(this["settingBossEnemy"]));
             }
             set {
                 this["settingBossEnemy"] = value;
@@ -649,10 +649,10 @@ namespace AOR_Extended_WPF.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool settingBossCrystalSpider {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingBossCrystalSpider {
             get {
-                return ((bool)(this["settingBossCrystalSpider"]));
+                return ((string)(this["settingBossCrystalSpider"]));
             }
             set {
                 this["settingBossCrystalSpider"] = value;
@@ -661,10 +661,10 @@ namespace AOR_Extended_WPF.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool settingBossFairyDragon {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingBossFairyDragon {
             get {
-                return ((bool)(this["settingBossFairyDragon"]));
+                return ((string)(this["settingBossFairyDragon"]));
             }
             set {
                 this["settingBossFairyDragon"] = value;
@@ -673,10 +673,10 @@ namespace AOR_Extended_WPF.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool settingBossVeilWeaver {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingBossVeilWeaver {
             get {
-                return ((bool)(this["settingBossVeilWeaver"]));
+                return ((string)(this["settingBossVeilWeaver"]));
             }
             set {
                 this["settingBossVeilWeaver"] = value;
@@ -685,10 +685,10 @@ namespace AOR_Extended_WPF.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool settingBossGriffin {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingBossGriffin {
             get {
-                return ((bool)(this["settingBossGriffin"]));
+                return ((string)(this["settingBossGriffin"]));
             }
             set {
                 this["settingBossGriffin"] = value;
@@ -697,10 +697,10 @@ namespace AOR_Extended_WPF.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool settingAvaloneDrones {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingAvaloneDrones {
             get {
-                return ((bool)(this["settingAvaloneDrones"]));
+                return ((string)(this["settingAvaloneDrones"]));
             }
             set {
                 this["settingAvaloneDrones"] = value;
@@ -709,10 +709,10 @@ namespace AOR_Extended_WPF.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool settingShowUnmanagedEnemies {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingShowUnmanagedEnemies {
             get {
-                return ((bool)(this["settingShowUnmanagedEnemies"]));
+                return ((string)(this["settingShowUnmanagedEnemies"]));
             }
             set {
                 this["settingShowUnmanagedEnemies"] = value;
@@ -721,10 +721,10 @@ namespace AOR_Extended_WPF.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool settingShowEventEnemies {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingShowEventEnemies {
             get {
-                return ((bool)(this["settingShowEventEnemies"]));
+                return ((string)(this["settingShowEventEnemies"]));
             }
             set {
                 this["settingShowEventEnemies"] = value;
@@ -745,10 +745,10 @@ namespace AOR_Extended_WPF.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool settingEnemiesHP {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingEnemiesHP {
             get {
-                return ((bool)(this["settingEnemiesHP"]));
+                return ((string)(this["settingEnemiesHP"]));
             }
             set {
                 this["settingEnemiesHP"] = value;
@@ -757,10 +757,10 @@ namespace AOR_Extended_WPF.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool settingEnemiesID {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingEnemiesID {
             get {
-                return ((bool)(this["settingEnemiesID"]));
+                return ((string)(this["settingEnemiesID"]));
             }
             set {
                 this["settingEnemiesID"] = value;
@@ -1496,6 +1496,258 @@ namespace AOR_Extended_WPF.Properties {
             }
             set {
                 this["IgnoreList"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingShowMap {
+            get {
+                return ((string)(this["settingShowMap"]));
+            }
+            set {
+                this["settingShowMap"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingStaticFiberEnchants {
+            get {
+                return ((string)(this["settingStaticFiberEnchants"]));
+            }
+            set {
+                this["settingStaticFiberEnchants"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingStaticHideEnchants {
+            get {
+                return ((string)(this["settingStaticHideEnchants"]));
+            }
+            set {
+                this["settingStaticHideEnchants"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingStaticOreEnchants {
+            get {
+                return ((string)(this["settingStaticOreEnchants"]));
+            }
+            set {
+                this["settingStaticOreEnchants"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingStaticWoodEnchants {
+            get {
+                return ((string)(this["settingStaticWoodEnchants"]));
+            }
+            set {
+                this["settingStaticWoodEnchants"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingStaticRockEnchants {
+            get {
+                return ((string)(this["settingStaticRockEnchants"]));
+            }
+            set {
+                this["settingStaticRockEnchants"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingLivingFiberEnchants {
+            get {
+                return ((string)(this["settingLivingFiberEnchants"]));
+            }
+            set {
+                this["settingLivingFiberEnchants"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingLivingHideEnchants {
+            get {
+                return ((string)(this["settingLivingHideEnchants"]));
+            }
+            set {
+                this["settingLivingHideEnchants"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingLivingOreEnchants {
+            get {
+                return ((string)(this["settingLivingOreEnchants"]));
+            }
+            set {
+                this["settingLivingOreEnchants"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingLivingWoodEnchants {
+            get {
+                return ((string)(this["settingLivingWoodEnchants"]));
+            }
+            set {
+                this["settingLivingWoodEnchants"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingLivingRockEnchants {
+            get {
+                return ((string)(this["settingLivingRockEnchants"]));
+            }
+            set {
+                this["settingLivingRockEnchants"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingLivingResourcesHP {
+            get {
+                return ((string)(this["settingLivingResourcesHP"]));
+            }
+            set {
+                this["settingLivingResourcesHP"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingLivingResourcesID {
+            get {
+                return ((string)(this["settingLivingResourcesID"]));
+            }
+            set {
+                this["settingLivingResourcesID"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingRawSize {
+            get {
+                return ((string)(this["settingRawSize"]));
+            }
+            set {
+                this["settingRawSize"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingFishing {
+            get {
+                return ((string)(this["settingFishing"]));
+            }
+            set {
+                this["settingFishing"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingResourceSize {
+            get {
+                return ((string)(this["settingResourceSize"]));
+            }
+            set {
+                this["settingResourceSize"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingShowFish {
+            get {
+                return ((string)(this["settingShowFish"]));
+            }
+            set {
+                this["settingShowFish"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingMistEnchants {
+            get {
+                return ((string)(this["settingMistEnchants"]));
+            }
+            set {
+                this["settingMistEnchants"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingDungeonEnchants {
+            get {
+                return ((string)(this["settingDungeonEnchants"]));
+            }
+            set {
+                this["settingDungeonEnchants"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingWispCage {
+            get {
+                return ((string)(this["settingWispCage"]));
+            }
+            set {
+                this["settingWispCage"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingDungeonGroup {
+            get {
+                return ((string)(this["settingDungeonGroup"]));
+            }
+            set {
+                this["settingDungeonGroup"] = value;
             }
         }
     }

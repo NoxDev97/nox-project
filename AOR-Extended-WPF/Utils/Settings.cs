@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Media.Imaging;
+using SpellsNamespace;
 
 namespace AOR_Extended_WPF.Utils
 {
@@ -88,6 +90,9 @@ namespace AOR_Extended_WPF.Utils
         public bool SettingFootTracksSolo { get; set; }
         public bool SettingFootTracksGroup { get; set; }
 
+        // Adicionar a propriedade SpellsInfo
+        public Dictionary<int, Spell> SpellsInfo { get; private set; }
+
         public Settings()
         {
             // Initialization
@@ -117,6 +122,12 @@ namespace AOR_Extended_WPF.Utils
             MistEnchants = new List<bool> { false, false, false, false, false };
             DungeonEnchants = new List<bool> { false, false, false, false, false };
             EnemyLevels = new List<bool> { false, false, false, false, false };
+
+            // Inicialização do SpellsInfo
+            var spellsInfo = new SpellsInfo();
+            spellsInfo.InitSpells();
+            SpellsInfo = spellsInfo.GetSpellList();
+
             Update();
         }
 
@@ -153,6 +164,12 @@ namespace AOR_Extended_WPF.Utils
 
         public async Task PreloadImageAndAddToList(string path, string container)
         {
+            if (!File.Exists(path))
+            {
+                Console.WriteLine($"Image not found: {path}");
+                return;
+            }
+
             BitmapImage bitmap = new BitmapImage(new Uri(path, UriKind.RelativeOrAbsolute));
 
             switch (container)
@@ -204,112 +221,103 @@ namespace AOR_Extended_WPF.Utils
 
         public bool ReturnLocalBool(string key)
         {
+            if (Properties.Settings.Default[key] is bool boolValue)
+            {
+                return boolValue;
+            }
+
             var value = Convert.ToString(Properties.Settings.Default[key]);
-            return value == "true";
+            return value?.ToLower() == "true";
         }
 
         public void Update()
         {
+            Console.WriteLine("Updating settings...");
+
             ShowMapBackground = ReturnLocalBool("settingShowMap");
+            Console.WriteLine($"ShowMapBackground: {ShowMapBackground}");
 
             // Players
             SettingOnOff = ReturnLocalBool("settingOnOff");
+            Console.WriteLine($"SettingOnOff: {SettingOnOff}");
             SettingNickname = ReturnLocalBool("settingNickname");
+            Console.WriteLine($"SettingNickname: {SettingNickname}");
             SettingHealth = ReturnLocalBool("settingHealth");
+            Console.WriteLine($"SettingHealth: {SettingHealth}");
             SettingMounted = ReturnLocalBool("settingMounted");
-            SettingItems = ReturnLocalBool("settingItems");
-            SettingItemsDev = ReturnLocalBool("settingItemsDev");
+            Console.WriteLine($"SettingMounted: {SettingMounted}");
             SettingSpells = ReturnLocalBool("settingSpells");
+            Console.WriteLine($"SettingSpells: {SettingSpells}");
             SettingSpellsDev = ReturnLocalBool("settingSpellsDev");
+            Console.WriteLine($"SettingSpellsDev: {SettingSpellsDev}");
+            SettingItems = ReturnLocalBool("settingItems");
+            Console.WriteLine($"SettingItems: {SettingItems}");
+            SettingItemsDev = ReturnLocalBool("settingItemsDev");
+            Console.WriteLine($"SettingItemsDev: {SettingItemsDev}");
             SettingDistance = ReturnLocalBool("settingDistance");
+            Console.WriteLine($"SettingDistance: {SettingDistance}");
             SettingGuild = ReturnLocalBool("settingGuild");
-            SettingSound = ReturnLocalBool("settingSound");
+            Console.WriteLine($"SettingGuild: {SettingGuild}");
 
-            // Static Resources
-            HarvestingStaticFiber = DeserializeHarvestingDict("settingStaticFiberEnchants");
-            HarvestingStaticHide = DeserializeHarvestingDict("settingStaticHideEnchants");
-            HarvestingStaticOre = DeserializeHarvestingDict("settingStaticOreEnchants");
-            HarvestingStaticWood = DeserializeHarvestingDict("settingStaticWoodEnchants");
-            HarvestingStaticRock = DeserializeHarvestingDict("settingStaticRockEnchants");
-
-            // Living Resources
-            HarvestingLivingFiber = DeserializeHarvestingDict("settingLivingFiberEnchants");
-            HarvestingLivingHide = DeserializeHarvestingDict("settingLivingHideEnchants");
-            HarvestingLivingOre = DeserializeHarvestingDict("settingLivingOreEnchants");
-            HarvestingLivingWood = DeserializeHarvestingDict("settingLivingWoodEnchants");
-            HarvestingLivingRock = DeserializeHarvestingDict("settingLivingRockEnchants");
-
+            // Resources
             LivingResourcesHP = ReturnLocalBool("settingLivingResourcesHP");
+            Console.WriteLine($"LivingResourcesHP: {LivingResourcesHP}");
             LivingResourcesID = ReturnLocalBool("settingLivingResourcesID");
-            ResourceSize = ReturnLocalBool("settingRawSize");
-            ShowFish = ReturnLocalBool("settingFishing");
+            Console.WriteLine($"LivingResourcesID: {LivingResourcesID}");
+            ResourceSize = ReturnLocalBool("settingResourceSize");
+            Console.WriteLine($"ResourceSize: {ResourceSize}");
+            ShowFish = ReturnLocalBool("settingShowFish");
+            Console.WriteLine($"ShowFish: {ShowFish}");
+
+            // Dungeons
+            MistSolo = ReturnLocalBool("settingMistSolo");
+            Console.WriteLine($"MistSolo: {MistSolo}");
+            MistDuo = ReturnLocalBool("settingMistDuo");
+            Console.WriteLine($"MistDuo: {MistDuo}");
+            WispCage = ReturnLocalBool("settingWispCage");
+            Console.WriteLine($"WispCage: {WispCage}");
+            DungeonSolo = ReturnLocalBool("settingDungeonSolo");
+            Console.WriteLine($"DungeonSolo: {DungeonSolo}");
+            DungeonGroup = ReturnLocalBool("settingDungeonGroup");
+            Console.WriteLine($"DungeonGroup: {DungeonGroup}");
+            DungeonCorrupted = ReturnLocalBool("settingDungeonCorrupted");
+            Console.WriteLine($"DungeonCorrupted: {DungeonCorrupted}");
+            DungeonHellgate = ReturnLocalBool("settingDungeonHellgate");
+            Console.WriteLine($"DungeonHellgate: {DungeonHellgate}");
 
             // Enemies
-            EnemyLevels[0] = ReturnLocalBool("settingNormalEnemy");
-            EnemyLevels[1] = ReturnLocalBool("settingMediumEnemy");
-            EnemyLevels[2] = ReturnLocalBool("settingEnchantedEnemy");
-            EnemyLevels[3] = ReturnLocalBool("settingMiniBossEnemy");
-            EnemyLevels[4] = ReturnLocalBool("settingBossEnemy");
-
-            AvaloneDrones = ReturnLocalBool("settingAvaloneDrones");
             ShowUnmanagedEnemies = ReturnLocalBool("settingShowUnmanagedEnemies");
+            Console.WriteLine($"ShowUnmanagedEnemies: {ShowUnmanagedEnemies}");
             ShowEventEnemies = ReturnLocalBool("settingShowEventEnemies");
-
-            EnemiesHP = ReturnLocalBool("settingEnemiesHP");
-            EnemiesID = ReturnLocalBool("settingEnemiesID");
-
-            // Mists
+            Console.WriteLine($"ShowEventEnemies: {ShowEventEnemies}");
             BossCrystalSpider = ReturnLocalBool("settingBossCrystalSpider");
+            Console.WriteLine($"BossCrystalSpider: {BossCrystalSpider}");
             BossFairyDragon = ReturnLocalBool("settingBossFairyDragon");
+            Console.WriteLine($"BossFairyDragon: {BossFairyDragon}");
             BossVeilWeaver = ReturnLocalBool("settingBossVeilWeaver");
+            Console.WriteLine($"BossVeilWeaver: {BossVeilWeaver}");
             BossGriffin = ReturnLocalBool("settingBossGriffin");
+            Console.WriteLine($"BossGriffin: {BossGriffin}");
+            EnemiesHP = ReturnLocalBool("settingEnemiesHP");
+            Console.WriteLine($"EnemiesHP: {EnemiesHP}");
+            EnemiesID = ReturnLocalBool("settingEnemiesID");
+            Console.WriteLine($"EnemiesID: {EnemiesID}");
 
             // Chests
             ChestGreen = ReturnLocalBool("settingChestGreen");
+            Console.WriteLine($"ChestGreen: {ChestGreen}");
             ChestBlue = ReturnLocalBool("settingChestBlue");
+            Console.WriteLine($"ChestBlue: {ChestBlue}");
             ChestPurple = ReturnLocalBool("settingChestPurple");
+            Console.WriteLine($"ChestPurple: {ChestPurple}");
             ChestYellow = ReturnLocalBool("settingChestYellow");
-
-            // Mists
-            MistSolo = ReturnLocalBool("settingMistSolo");
-            MistDuo = ReturnLocalBool("settingMistDuo");
-            WispCage = ReturnLocalBool("settingCage");
-
-            MistEnchants[0] = ReturnLocalBool("settingMistE0");
-            MistEnchants[1] = ReturnLocalBool("settingMistE1");
-            MistEnchants[2] = ReturnLocalBool("settingMistE2");
-            MistEnchants[3] = ReturnLocalBool("settingMistE3");
-            MistEnchants[4] = ReturnLocalBool("settingMistE4");
-
-            // Dungeons
-            DungeonEnchants[0] = ReturnLocalBool("settingDungeonE0");
-            DungeonEnchants[1] = ReturnLocalBool("settingDungeonE1");
-            DungeonEnchants[2] = ReturnLocalBool("settingDungeonE2");
-            DungeonEnchants[3] = ReturnLocalBool("settingDungeonE3");
-            DungeonEnchants[4] = ReturnLocalBool("settingDungeonE4");
-
-            DungeonSolo = ReturnLocalBool("settingDungeonSolo");
-            DungeonGroup = ReturnLocalBool("settingDungeonDuo");
-            DungeonCorrupted = ReturnLocalBool("settingDungeonCorrupted");
-            DungeonHellgate = ReturnLocalBool("settingDungeonHellgate");
+            Console.WriteLine($"ChestYellow: {ChestYellow}");
 
             // FootTracks
             SettingFootTracksSolo = ReturnLocalBool("settingFootTracksSolo");
+            Console.WriteLine($"SettingFootTracksSolo: {SettingFootTracksSolo}");
             SettingFootTracksGroup = ReturnLocalBool("settingFootTracksGroup");
-
-            IgnoreList = DeserializeIgnoreList("ignoreList");
-        }
-
-        private Dictionary<string, List<bool>> DeserializeHarvestingDict(string key)
-        {
-            var value = Convert.ToString(Properties.Settings.Default[key]);
-            return string.IsNullOrEmpty(value) ? CreateHarvestingDict() : Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, List<bool>>>(value);
-        }
-
-        private List<string> DeserializeIgnoreList(string key)
-        {
-            var value = Convert.ToString(Properties.Settings.Default[key]);
-            return string.IsNullOrEmpty(value) ? new List<string>() : Newtonsoft.Json.JsonConvert.DeserializeObject<List<string>>(value);
+            Console.WriteLine($"SettingFootTracksGroup: {SettingFootTracksGroup}");
         }
     }
 }
